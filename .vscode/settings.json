@@ -1,0 +1,8 @@
+{
+  "dbt.queryLimit": 100,
+  "files.associations": {
+    "*.sql": "jinja-sql"
+  },
+  "sqlfluff.experimental.format.executeInTerminal": true,
+  "sqlfluff.executablePath": "./.venv/bin/sqlfluff"
+}

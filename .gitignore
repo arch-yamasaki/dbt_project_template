@@ -1,0 +1,22 @@
+
+target/
+dbt_packages/
+logs/
+
+## secretsの管理用
+**/.env
+**/.secrets
+**/secrets
+**/.devcontainer/gcloud
+
+## vscodeの環境管理
+/.vscode/**/*
+!/.vscode/extensions.json
+!/.vscode/settings.json
+
+## dbt関連
+**/.user.yml
+profiles.yml
+
+## pipenv関連
+**/.venv

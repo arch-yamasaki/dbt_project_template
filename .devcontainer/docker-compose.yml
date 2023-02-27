@@ -1,0 +1,11 @@
+version: '3'
+services:
+  local:
+    build: .
+    tty: true
+    volumes:
+      - ../.:/usr/app/dbt # WORKDIRにマウント
+      - ./profiles.yml:/root/.dbt/profiles.yml # profiles.ymlをwizard for dbt coreが認識する場所に設定
+      - ./gcloud:/root/.config/gcloud # gcloudの認証情報を永続化させる
+    network_mode: host
+    entrypoint: tail

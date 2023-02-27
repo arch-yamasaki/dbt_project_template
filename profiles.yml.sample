@@ -1,0 +1,12 @@
+default: # this needs to match the profile in your dbt_project.yml file
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth # gcloud auth application-default loginを用いた認証を通す必要がある。詳しくはREADMEへ。
+      project: <YourProject>
+      dataset: <username> # 被らなさそうな名前に設定する。山崎陽平ならdbt_yyamasakiとか。localからdbt runしたときにデータが作成されるデータセット名に影響する。
+      threads: 4
+      timeout_seconds: 300
+      location: asia-northeast1
+      priority: interactive

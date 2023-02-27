@@ -1,0 +1,10 @@
+version: 2
+
+seeds:
+  - name: seed_location_label
+    description: "日本語対応テーブル"
+    config:
+      quote_columns:  false
+    columns:
+      - name: prefecture_label
+      - name: prefecture_name

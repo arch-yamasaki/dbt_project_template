@@ -1,0 +1,15 @@
+{
+  // 基本設定
+  // 重要：docker-composeを使用するので、devcontainer.jsonではDokcerfileを指定しないこと。
+  "name" : "dbt-container",
+  "dockerComposeFile": "docker-compose.yml", 
+  "service" : "local", // docker-composerのservice名と同一である必要あり
+  "workspaceFolder" : "/usr/app/dbt",
+  // その他の設定
+  // "runArgs": [ "--network=other-docker-network"],
+  "extensions": [
+    "Fivetran.dbt-language-server", // Wizard for Dbt Coreの拡張のこと
+    "innoverio.vscode-dbt-power-user",
+    "dorzey.vscode-sqlfluff"
+  ],
+}
